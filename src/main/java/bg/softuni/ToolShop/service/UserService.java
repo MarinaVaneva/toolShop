@@ -2,9 +2,13 @@ package bg.softuni.ToolShop.service;
 
 import bg.softuni.ToolShop.model.dtos.UserRegistrationDTO;
 import bg.softuni.ToolShop.model.entity.UserEntity;
+import bg.softuni.ToolShop.model.view.UserViewModel;
 import bg.softuni.ToolShop.repository.UserRepository;
 
+import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -52,6 +56,20 @@ public class UserService {
   public UserEntity findById(Long id) {
     return userRepository.findById(id)
             .orElse(null);
+  }
+  public List<UserViewModel> findAllUserAndCountOfOrdersOrderByCountDesc() {
+
+    return userRepository.findAllUserAndCountOfOrdersOrderByCountDesc()
+            .stream()
+            .map(user -> {
+              UserViewModel userViewModel = new UserViewModel();
+              userViewModel.setFirstName(user.getFirstName());
+              userViewModel.setLastName(user.getLastName());
+              userViewModel.setCountOfTools(user.getOrders().size());
+
+              return userViewModel;
+            })
+            .collect(Collectors.toList());
   }
 
 }

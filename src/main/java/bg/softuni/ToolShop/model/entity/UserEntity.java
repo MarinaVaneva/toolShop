@@ -1,10 +1,15 @@
 package bg.softuni.ToolShop.model.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class UserEntity {
@@ -25,6 +30,17 @@ public class UserEntity {
   @ManyToMany(fetch = FetchType.EAGER)
   private List<UserRoleEntity> roles = new ArrayList<>();
 
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
+  private List<Order> orders;
+
+  public List<Order> orders() {
+    return orders;
+  }
+
+  public UserEntity setOrders(List<Order> orders) {
+    this.orders = orders;
+    return this;
+  }
 
   public Long getId() {
     return id;
