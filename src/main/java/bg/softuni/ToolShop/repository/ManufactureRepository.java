@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface ManufactureRepository extends JpaRepository<Manufacture, Long> {
-//    Optional<Manufacture> findManufactureByName(String name);
+   Optional<Manufacture> findManufactureByName(String name);
 }

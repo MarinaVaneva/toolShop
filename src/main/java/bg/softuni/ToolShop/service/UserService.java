@@ -49,5 +49,9 @@ public class UserService {
 
     successfulLoginProcessor.accept(authentication);
   }
+  public UserEntity findById(Long id) {
+    return userRepository.findById(id)
+            .orElse(null);
+  }
 
 }
