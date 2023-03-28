@@ -8,12 +8,10 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 @Setter
@@ -30,6 +28,8 @@ public class OrderAddBindingModel {
     private UserEntity customer;
 
     private List<Tool> tools;
+
+    private Date orderTime;
 
 
 }

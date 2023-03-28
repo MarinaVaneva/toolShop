@@ -5,6 +5,8 @@ import bg.softuni.ToolShop.model.entity.UserEntity;
 import bg.softuni.ToolShop.model.enums.UserRoleEnum;
 import jakarta.validation.constraints.NotNull;
 
+
+import javax.xml.crypto.Data;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -18,5 +20,7 @@ public class OrderDTO {
     private UserEntity customer;
 
     private List<Tool> tools;
+
+    private String orderTime;
 
 }

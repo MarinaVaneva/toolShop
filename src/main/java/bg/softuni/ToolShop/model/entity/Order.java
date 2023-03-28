@@ -2,12 +2,10 @@ package bg.softuni.ToolShop.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Positive;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 @Setter
@@ -31,6 +29,8 @@ public class Order {
 
     @OneToMany
     private List<Tool> tools;
+
+    private Date orderTime;
 
 
 }
