@@ -23,6 +23,8 @@ public class ToolDTO {
 
     private String description;
 
+    private String toolUrl;
+
     @NonNull
     @Positive
     private Double price;

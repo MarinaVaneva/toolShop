@@ -13,13 +13,17 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class OrderViewModel {
 
-       private Long  id;
+    private Long  id;
 
-    private String name;
+    private String title;
 
     private BigDecimal price;
 
     private CategoryNameEnum category;
+
+    private String description;
+
+    private String toolUrl;
 
 
 

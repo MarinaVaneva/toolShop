@@ -72,5 +72,9 @@ public class ToolsService {
        return manufactureRepository.save(createNewManufactore(manufactoreName));
    }
 
+//   public List<Tool> getAllTools(){
+//        return toolRepository.findAll();
+//   }
+
 
 }

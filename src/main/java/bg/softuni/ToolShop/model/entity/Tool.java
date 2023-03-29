@@ -20,6 +20,7 @@ public class Tool {
     @Column(nullable = false)
     private String title;
 
+    private String toolUrl;
 
     private CategoryNameEnum categories;
 
