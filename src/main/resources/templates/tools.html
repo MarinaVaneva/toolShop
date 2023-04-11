@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head::head}"></head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}">
+
+    Navbar
+</div>
+
+    < section  class =" tool " th:each =" r : ${api/tools} " th:object =" ${r} " >
+    < img  th:src =" *{toolUrl} " alt =" Инструмент " >
+    < div >
+    < h2  th:text =" *{title} "
+< p  th:text =" *{description} "
+    < p  th:text =" *{price} "
+<!--< a  th:href =" @{/routes/details/{id}(id=*{id})} " class =" btn "-->
+
+    <div>
+        <footer></footer>
+    </div>
+</body>
+</html>>
