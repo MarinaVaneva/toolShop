@@ -12,6 +12,6 @@ import org.springframework.web.context.annotation.SessionScope;
 @Component
 @SessionScope
 public class CurrentUser {
-    private Long id;
+//    private Long id;
     private String username;
 }
