@@ -2,7 +2,7 @@ package bg.softuni.ToolShop.web;
 
 
 import bg.softuni.ToolShop.model.view.OrderViewModel;
-import bg.softuni.ToolShop.sec.CurrentUser;
+import bg.softuni.ToolShop.service.sec.CurrentUser;
 import bg.softuni.ToolShop.service.OrderService;
 import bg.softuni.ToolShop.service.UserService;
 import org.springframework.stereotype.Controller;

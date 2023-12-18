@@ -1,4 +1,4 @@
-package bg.softuni.ToolShop.sec;
+package bg.softuni.ToolShop.service.sec;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,6 +12,6 @@ import org.springframework.web.context.annotation.SessionScope;
 @Component
 @SessionScope
 public class CurrentUser {
-//    private Long id;
+    private Long id;
     private String username;
 }

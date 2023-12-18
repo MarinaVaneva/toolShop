@@ -20,7 +20,7 @@ public class Manufacture {
 
     private String name;
 
-//@OneToMany(mappedBy = "manufactures", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "manufactures", fetch = FetchType.EAGER)
     @Transient
     private  List<Tool> tools;
 //    private List<Tool> tools;

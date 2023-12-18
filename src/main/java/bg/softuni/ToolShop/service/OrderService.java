@@ -5,7 +5,7 @@ import bg.softuni.ToolShop.model.entity.Order;
 import bg.softuni.ToolShop.model.service.OrderServiceModel;
 import bg.softuni.ToolShop.model.view.OrderViewModel;
 import bg.softuni.ToolShop.repository.OrderRepository;
-import bg.softuni.ToolShop.sec.CurrentUser;
+import bg.softuni.ToolShop.service.sec.CurrentUser;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

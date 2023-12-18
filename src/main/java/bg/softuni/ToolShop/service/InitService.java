@@ -35,7 +35,7 @@ public class InitService {
 
   private void initRoles() {
     if (userRoleRepository.count() == 0) {
-      var moderatorRole = new UserRoleEntity().setRole(UserRoleEnum.MODERATOR);
+      var moderatorRole = new UserRoleEntity().setRole(UserRoleEnum.USER);
       var adminRole = new UserRoleEntity().setRole(UserRoleEnum.ADMIN);
 
       userRoleRepository.save(moderatorRole);
@@ -66,7 +66,7 @@ public class InitService {
   private void initModerator(){
 
     var moderatorRole = userRoleRepository.
-        findUserRoleEntityByRole(UserRoleEnum.MODERATOR).orElseThrow();
+        findUserRoleEntityByRole(UserRoleEnum.USER).orElseThrow();
 
     var moderatorUser = new UserEntity().
         setEmail("moderator@example.com").
